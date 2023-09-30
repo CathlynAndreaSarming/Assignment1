@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css"/>
+    <style>
+        /* Add background color to the navbar */
+        .navbar {
+            background-color: #BC8F8F;
+            background-image: url(img/logo.png);
+	        background-repeat: no-repeat;
+	        background-size: auto 100%;
+        }
+
+        /* Space out the navbar items and remove the bullet points */
+        ul.navbar-nav {
+            list-style: none;
+            display: flex;
+            gap: 100px; /* Adjust the spacing between navbar items */
+            justify-content: center; /* Align items to the right */
+            font-size: 25px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        ul.navbar-nav li {
+            /* No need for display: inline-block; or float: right; */
+        }
+
+        nav a:link {
+            text-decoration: none;
+        }
+        a:visited {
+            text-decoration: none;
+            color: #4D3232;
+        }
+        a:hover {
+            text-decoration: none;
+            color:	khaki;
+        }
+        a:active {
+            text-decoration: none;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #FFE4E1;
+        }
+        main {
+            flex: 2;
+        }
+        footer {
+            background-color: #BC8F8F;
+            color: #ffffff;
+            padding: 0px;
+        }
+        footer .navbar-text {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #4D3232;
+        }
+    </style>
+</head>
+<body>
