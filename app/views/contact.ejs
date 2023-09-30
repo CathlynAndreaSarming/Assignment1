@@ -1,54 +1,49 @@
 <%- include ('partials/header.ejs') %>
 <%- include ('partials/main_nav.ejs') %>
 
-<body class="contact">
-    <main class="container">
-        <div class="jumbotron">
-                <h1>Contact Us!</h1>
+<main class="contact">
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to <%= title %> Page!</h1>
 
-                <form action="facebook.com" method="post">
-                    <label for="firstname">First Name</label><br>
-                    <input type="text" class="input" id="firstname" name="firstname" required><br><br>
+            <form action="facebook.com" method="post">
+                <label for="firstname">First Name</label><br>
+                <input type="text" class="input" id="firstname" name="firstname" required><br><br>
 
-                    <label for="lastname">Last Name</label><br>
-                    <input type="text" class="input" id="lastname" name="lastname" required><br><br>
+                <label for="lastname">Last Name</label><br>
+                <input type="text" class="input" id="lastname" name="lastname" required><br><br>
 
-                    <label for="contactnumber">Contact Number</label><br>
-                    <input type="text" class="input" id="contactnumber" name="contactnumber" required><br><br>
+                <label for="contactnumber">Contact Number</label><br>
+                <input type="text" class="input" id="contactnumber" name="contactnumber" required><br><br>
 
-                    <label for="email">Email</label><br>
-                    <input type="text" class="input" id="email" name="email" required><br><br>
+                <label for="email">Email</label><br>
+                <input type="text" class="input" id="email" name="email" required><br><br>
 
-                    <label for="messageus">Message Us</label><br>
-                    <input type="text" class="input" id="messageusr" name="messageus" required><br><br>
-                </form>
-                <input type= "submit" value="Submit">
-            </div>
-    </main>
-</body>
+                <label for="messageus">Message Us</label><br>
+                <input type="text" class="input" id="messageusr" name="messageus" required><br><br>
+            </form>
+            <input type= "submit" value="Submit">
 
-<script>
-    function captureAndRedirect(event) {
-        // Prevent the form from actually submitting
-        event.preventDefault();
-
-        // Capture form data (in a real scenario, you would send this data to a server)
-        const formData = {
-            firstname: document.getElementById('firstname').value,
-            lastname: document.getElementById('lastname').value,
-            contactnumber: document.getElementById('contactnumber').value,
-            email: document.getElementById('email').value,
-            messageus: document.getElementById('messageusr').value,
-        };
-
-        // Log the captured data (in a real scenario, you would send it to a server)
-        console.log(formData);
-
-        // Redirect to the home page
-        window.location.href = "http://localhost:3000/";
-    }
-</script>
-
+            <p>For more details, you can contact me through:</p>
+                Phone: (483) 574-4769
+		    <br>Email: <a href="mailto:cathlynsarming@gmail.com">mailto:cathlynsarming@gmail.com</a>
+        </div>
+</main>
+<ul class="navbar-nav ml-auto">
+    <% if (title=="Product"){%>
+        <li class="nav-item active">
+        <%}else{%>
+        <li class="nav-item">
+        <%}%>
+        <a class="nav-link" href="/products"><i class="fa-brands fa-product-hunt"></i>Products</a>
+        </li>
+    <% if (title=="Services"){%>
+    <li class="nav-item active">
+    <%}else{%>
+    <li class="nav-item">
+    <%}%>
+    <a class="nav-link" href="/services"><i class="fa-brands fa-servicestack"></i>Services</a>
+    </li>
+</ul>
 <%- include ('partials/bottom_nav.ejs') %>
 <%- include ('partials/footer.ejs') %>
 

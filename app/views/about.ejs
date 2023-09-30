@@ -3,14 +3,39 @@
    
 
 <main class="about">
-  <div class="jumbotron">
-    <h1 class="display-4">About Me!</h1>
-    <p>I am eating</p>
+    <div class="jumbotron">
+        <h1 class="display-4">"About Me"</h1>
+
+            <h2>Cathlyn Andrea Sarming</h2>
+                  <p>Hello! I am Cathlyn Andrea Sarming a Software Engineering Technician. I came from the 
+                   Philippines and is studying here in Canada to pursue my career.I'm an individual who 
+                likes to explore and create things. My hobbies are painting, editing, drawing, and 
+                playing video games. I am an outgoing person but tends to get their energy drained. 
+                That's all about me!</p>
+
+            <h3>You can learn more <a href="https://drive.google.com/file/d/1WSVitmqRx8N_OHjgFi4iC1MMSns0fYeZ/view?usp=sharing">about me</a> here!</h3>
+              <figure>
+                   <img src="img/profile.jpg" width="330" height="400" alt="Cathlyn Andrea Sarming">
+              </figure>
     </div>
-    </main>
+</main>
     <!--bottom nav-->
-   
-   
+    <ul class="navbar-nav ml-auto">
+        <% if (title=="Home"){%>
+            <li class="nav-item active">
+            <%}else{%>
+            <li class="nav-item">
+            <%}%>
+            <a class="nav-link" href="/"><i class="fas fa-lg fa-laptop-house"></i>Home</a>
+            </li>
+        <% if (title=="Services"){%>
+        <li class="nav-item active">
+        <%}else{%>
+        <li class="nav-item">
+        <%}%>
+        <a class="nav-link" href="/services"><i class="fa-brands fa-servicestack"></i>Services</a>
+        </li>
+    </ul>
       <!--script section-->
       <%- include ('partials/bottom_nav.ejs') %>
       <%- include ('partials/footer.ejs') %>

@@ -4,12 +4,33 @@
 
 <main class="welcome">
   <div class="jumbotron">
-    <h1 class="display-4">Welcome to <%= title %> Page!</h1>
-    <p>I am eating</p>
+        <h1 class="display-4">Welcome to Cathlyn's Page!</h1>
+    
+     <p>My objective is to help and connect with you in such a manner 
+        that the exchange of information, ideas, and support becomes 
+        a good and meaningful experience. I'm here to make our connection 
+        pleasurable and meaningful, whether it's answering questions, 
+        offering direction, or simply having a discussion. Let's explore, 
+        learn, and share together in a way that adds value to your journey.</p>
     </div>
-    </main>
+</main>
     <!--bottom nav-->
-   
+    <ul class="navbar-nav ml-auto">
+        <% if (title=="About"){%>
+            <li class="nav-item active">
+            <%}else{%>
+            <li class="nav-item">
+            <%}%>
+            <a class="nav-link" href="/about"><i class="fa-solid fa-address-card"></i>About</a>
+            </li>
+            <% if (title=="Product"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/products"><i class="fa-brands fa-product-hunt"></i>Products</a>
+                </li>
+    </ul>
    
       <!--script section-->
       <%- include ('partials/bottom_nav.ejs') %>

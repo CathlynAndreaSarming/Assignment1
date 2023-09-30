@@ -5,11 +5,43 @@
 <main class="service">
   <div class="jumbotron">
     <h1 class="display-4">Welcome to <%= title %> Page!</h1>
-    <p>I am eating</p>
+
+    <h2><span lang="en-ca">Web Development</span></h2>
+    <p><img alt="Web Development" height="200" src="img/1.jpg" width="200"></p>
+    <p>My design philosophy revolves around creating user-friendly interfaces. 
+     I focus on intuitive navigation, compelling visuals, and engaging user 
+      experiences to leave a lasting impression on your audience. </p>
+    <br>
+    <h2><span lang="en-ca">General Programming</span></h2>
+    <p><img alt="General Programming" height="200" src="img/3.png" width="200"></p>
+    <p>Organize and optimize your data with my database design and management services. 
+      I create efficient database structures, ensuring data integrity, security, and easy retrieval.</p>
+    <br>
+    <h2><span lang="en-ca">Blender</span></h2>
+    <p><img alt="Blender" height="200" src="img/blender.png" width="200"></p>
+    <p>Unleash your imagination with my 3D modeling and sculpting services. 
+      Whether you need detailed characters, objects, or environments, I can 
+      craft intricate 3D models that meet your specifications.</p>
+    <br>
     </div>
     </main>
     <!--bottom nav-->
-   
+    <ul class="navbar-nav ml-auto">
+      <% if (title=="Home"){%>
+          <li class="nav-item active">
+          <%}else{%>
+          <li class="nav-item">
+          <%}%>
+          <a class="nav-link" href="/"><i class="fas fa-lg fa-laptop-house"></i>Home</a>
+          </li>
+          <% if (title=="Contact"){%>
+            <li class="nav-item active">
+            <%}else{%>
+            <li class="nav-item">
+            <%}%>
+            <a class="nav-link" href="/contact"><i class="fa-solid fa-address-book"></i>Contact</a>
+            </li>
+  </ul>
    
       <!--script section-->
       <%- include ('partials/bottom_nav.ejs') %>

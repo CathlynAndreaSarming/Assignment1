@@ -4,12 +4,41 @@
 
 <main class="products">
   <div class="jumbotron">
-    <h1 class="display-4">My Products!</h1>
-    <p>I am eating</p>
+    <h1 class="display-4">Welcome to <%= title %> Page!</h1>
+
+    <h2><span lang="en-ca">Dungeon Crawler</span></h2>
+    <p><img alt="Dungeon Crawler" height="200" src="img/img1.png" width="200"></p>
+    <p>It is about a player has to fight three waves of enemies to escape. This game was a group project that was made during our winter semester. 
+      I helped in designing the game details while the rest of the members did the coding. I was having a hard time in helping to create this game
+       since I have little experience in coding.</p>
+    <br>
+    <h2><span lang="en-ca">Erik Conover Website</span></h2>
+    <p><img alt="Erik Conover Website" height="200" src="img/2.png" width="200"></p>
+    <p>This website was the final project I made on my course, Web Interface Design, during the winter semester. </p>
+    <br>
+    <h2><span lang="en-ca">Cathy Sarming Studios</span></h2>
+    <p><img alt="house1" height="200" src="img/logo.png" width="200"></p>
+    <p>This website is currently made this fall semester for my Web Application course. 
+      Using Express.js is quite interesting and hard at the same time. It was challenging in creating this project.</p>
     </div>
     </main>
     <!--bottom nav-->
-   
+    <ul class="navbar-nav ml-auto">
+      <% if (title=="Home"){%>
+          <li class="nav-item active">
+          <%}else{%>
+          <li class="nav-item">
+          <%}%>
+          <a class="nav-link" href="/"><i class="fas fa-lg fa-laptop-house"></i>Home</a>
+          </li>
+          <% if (title=="Contact"){%>
+            <li class="nav-item active">
+            <%}else{%>
+            <li class="nav-item">
+            <%}%>
+            <a class="nav-link" href="/contact"><i class="fa-solid fa-address-book"></i>Contact</a>
+            </li>
+  </ul>
    
       <!--script section-->
       <%- include ('partials/bottom_nav.ejs') %>
