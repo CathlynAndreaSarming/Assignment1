@@ -1,3 +1,9 @@
+/*
+File Name: express.js
+Student's Name: [Cathlyn Andrea Sarming]
+Student ID: [301295539]
+Date: [09/30/2023]
+*/
 const express = require('express');
 const morgan = require('morgan');
 const compression = require('compression');
@@ -43,7 +49,8 @@ app.use('/', require('../app/routes/index.server.routes.js'));
     //require('../app/routes/index.server.routes.js')(app);
 
   // Serve static files from the 'public' directory
-  app.use(express.static('./public'));
+//   app.use(express.static('./public/content'));
+app.use(express.static(path.join(__dirname, 'public')));
 
   return app;
 };

@@ -5,45 +5,27 @@
     <div class="jumbotron">
         <h1 class="display-4">Welcome to <%= title %> Page!</h1>
 
-            <form action="facebook.com" method="post">
-                <label for="firstname">First Name</label><br>
-                <input type="text" class="input" id="firstname" name="firstname" required><br><br>
+            <label for="firstname">First Name</label><br>
+            <input type="text" class="input" id="firstname" name="firstname" required><br><br>
 
-                <label for="lastname">Last Name</label><br>
-                <input type="text" class="input" id="lastname" name="lastname" required><br><br>
+            <label for="lastname">Last Name</label><br>
+            <input type="text" class="input" id="lastname" name="lastname" required><br><br>
 
-                <label for="contactnumber">Contact Number</label><br>
-                <input type="text" class="input" id="contactnumber" name="contactnumber" required><br><br>
+            <label for="contactnumber">Contact Number</label><br>
+            <input type="text" class="input" id="contactnumber" name="contactnumber" required><br><br>
 
-                <label for="email">Email</label><br>
-                <input type="text" class="input" id="email" name="email" required><br><br>
+            <label for="email">Email</label><br>
+            <input type="text" class="input" id="email" name="email" required><br><br>
 
-                <label for="messageus">Message Us</label><br>
-                <input type="text" class="input" id="messageusr" name="messageus" required><br><br>
-            </form>
+            <label for="messageus">Message Us</label><br>
+            <input type="text" class="input" id="messageusr" name="messageus" required><br><br>
             <input type= "submit" value="Submit">
 
             <p>For more details, you can contact me through:</p>
                 Phone: (483) 574-4769
-		    <br>Email: <a href="mailto:cathlynsarming@gmail.com">mailto:cathlynsarming@gmail.com</a>
+		    <br>Email: <a href="mailto:cathlynsarming@gmail.com">cathlynsarming@gmail.com</a>
         </div>
 </main>
-<ul class="navbar-nav ml-auto">
-    <% if (title=="Product"){%>
-        <li class="nav-item active">
-        <%}else{%>
-        <li class="nav-item">
-        <%}%>
-        <a class="nav-link" href="/products"><i class="fa-brands fa-product-hunt"></i>Products</a>
-        </li>
-    <% if (title=="Services"){%>
-    <li class="nav-item active">
-    <%}else{%>
-    <li class="nav-item">
-    <%}%>
-    <a class="nav-link" href="/services"><i class="fa-brands fa-servicestack"></i>Services</a>
-    </li>
-</ul>
 <%- include ('partials/bottom_nav.ejs') %>
 <%- include ('partials/footer.ejs') %>
 
