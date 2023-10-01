@@ -5,6 +5,7 @@
     <div class="jumbotron">
         <h1 class="display-4">Welcome to <%= title %> Page!</h1>
 
+        <form id="contactForm">
             <label for="firstname">First Name</label><br>
             <input type="text" class="input" id="firstname" name="firstname" required><br><br>
 
@@ -19,13 +20,24 @@
 
             <label for="messageus">Message Us</label><br>
             <input type="text" class="input" id="messageusr" name="messageus" required><br><br>
-            <input type= "submit" value="Submit">
 
-            <p>For more details, you can contact me through:</p>
-                Phone: (483) 574-4769
-		    <br>Email: <a href="mailto:cathlynsarming@gmail.com">cathlynsarming@gmail.com</a>
-        </div>
+            <input type="button" value="Submit" onclick="submitForm()">
+        </form>
+
+        <p>For more details, you can contact me through:</p>
+        Phone: (483) 574-4769
+        <br>Email: <a href="mailto:cathlynsarming@gmail.com">cathlynsarming@gmail.com</a>
+    </div>
 </main>
+
+<script>
+    function submitForm() {
+        alert('Form submitted! Redirecting to Home Page...');
+        
+        window.location.href = 'http://localhost:3000/';
+    }
+</script>
+
 <%- include ('partials/bottom_nav.ejs') %>
 <%- include ('partials/footer.ejs') %>
 
