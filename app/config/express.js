@@ -35,7 +35,7 @@ module.exports = function () {
 
   app.set('views', './app/views');
   app.set('view engine', 'ejs');
-app.use('/', require('../../app/routes/index.server.routes.js'));
+app.use('/', require('../routes/index.server.routes.js'));
 
 //app.use('/', 'routes');
 
