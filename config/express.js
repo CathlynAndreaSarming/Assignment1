@@ -10,6 +10,7 @@ const compression = require('compression');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const session = require('express-session');
+const path = require('path');
 
 module.exports = function () {
   const app = express();
@@ -50,7 +51,7 @@ app.use('/', require('../app/routes/index.server.routes.js'));
 
   // Serve static files from the 'public' directory
 //   app.use(express.static('./public/content'));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('./public'));
 
   return app;
 };
